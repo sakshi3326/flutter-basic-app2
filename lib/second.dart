@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class Second extends StatelessWidget {
@@ -7,8 +9,14 @@ class Second extends StatelessWidget {
         color: Colors.yellow,
         child: Center(
             child: Text(
-          'This is Android Development',
+          'A random number is ${randomNo()}',
           textDirection: TextDirection.ltr,
         )));
+  }
+
+  int randomNo() {
+    var r = Random();
+    int i = r.nextInt(50);
+    return i;
   }
 }

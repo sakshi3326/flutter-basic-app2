@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app2/util.dart';
 
 class Second extends StatelessWidget {
   @override
@@ -10,6 +11,7 @@ class Second extends StatelessWidget {
       child: Container(
           height: 300.0,
           width: 200.0,
+          color: lightPurpleColor,
           child: Text(
             randomNo(),
             textDirection: TextDirection.ltr,

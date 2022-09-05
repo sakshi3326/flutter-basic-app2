@@ -24,9 +24,17 @@ class Second extends StatelessWidget {
             0.7,
             1
           ], center: Alignment(0.1, 0.3), focal: Alignment(-0.1, 0.6))),
-          child: Text(
-            randomNo(),
-            textDirection: TextDirection.ltr,
+          child: GestureDetector(
+            onTap: () {
+              Scaffold.of(context).showSnackBar(new SnackBar(
+                content: new Text('It was pressed'),
+                duration: Duration(seconds: 2),
+              );
+            },
+            child: Text(
+              randomNo(),
+              textDirection: TextDirection.ltr,
+            ),
           )),
     );
   }
